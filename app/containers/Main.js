@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
+import Header from '../components/header';
 
 let styles = {
   container: {
@@ -14,7 +15,7 @@ class Main extends React.Component {
   render () {
     return (
       <div style={styles.container}>
-        <h1 style={styles.header}>Hello World</h1>
+        <Header />
         {this.props.children}
       </div>
     )
