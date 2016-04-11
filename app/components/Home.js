@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import GetCityContainer from '../containers/GetCityContainer';
 
 let styles = {
   container: {
@@ -20,10 +21,7 @@ class Home extends React.Component {
     return (
       <div style={styles.container}>
         <h1>Enter a City and State</h1>
-        <div className="col-xs-2" style={styles.space}>
-          <input type="input" className="form-control" placeholder="Sydney, Australia" />
-        </div>
-        <button className="btn btn-lg btn-success" style={styles.space}>Get Weather</button>
+        <GetCityContainer />
       </div>
     )
   }

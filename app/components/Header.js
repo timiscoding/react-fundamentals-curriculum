@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
+import GetCityContainer from '../containers/GetCityContainer';
 
 let styles = {
   container: {
@@ -10,9 +11,6 @@ let styles = {
   },
   whiteText: {
     color: 'white'
-  },
-  gap: {
-    marginRight: '10px'
   }
 };
 
@@ -24,12 +22,7 @@ class Header extends React.Component {
           <div className="navbar-header">
             <a className="navbar-brand" href="#" style={styles.whiteText}>Hot or Not</a>
           </div>
-          <form className="navbar-form navbar-right" role="search">
-            <div className="form-group" style={styles.gap}>
-              <input type="text" className="form-control" placeholder="Sydney, Australia" />
-            </div>
-            <button type="submit" className="btn btn-success">Get Weather</button>
-          </form>
+          <GetCityContainer direction="row" />
         </div>
       </nav>
     )
