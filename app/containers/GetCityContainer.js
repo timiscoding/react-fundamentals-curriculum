@@ -18,13 +18,7 @@ var GetCityContainer = React.createClass({
   handleSubmitCity: function(event){
     event.preventDefault();
     console.log('Handling submit city', this.state.city);
-    api.getCurrentWeather(this.state.city)
-      .then(function(data){
-        console.log('weather', data);
-      })
-      .catch(function(err){
-        console.log('error getting weather', err);
-      });
+    api.getForecast(this.state.city);
   },
   render: function() {
     return (
