@@ -20,7 +20,8 @@ function InputField (props) {
       <input type="text"
         placeholder="Sydney, Ausralia"
         className="form-control"
-        onChange={props.onUpdateCity} />
+        onChange={props.onUpdateCity}
+        value={props.city} />
     </div>
   )
 }
@@ -43,6 +44,7 @@ function GetCity (props) {
       className={formType}>
       <InputField
         onUpdateCity={props.onUpdateCity}
+        city={props.city}
       />
       <Button
         onSubmitCity={props.onSubmitCity}
@@ -54,7 +56,8 @@ function GetCity (props) {
 GetCity.propTypes = {
   direction: PropTypes.string,
   onUpdateCity: PropTypes.func.isRequired,
-  onSubmitCity: PropTypes.func.isRequired
+  onSubmitCity: PropTypes.func.isRequired,
+  city: PropTypes.string
 };
 
 module.exports = GetCity;

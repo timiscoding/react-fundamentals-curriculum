@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ReactjsProgram/react-fundamentals-curriculum#readme",
   "dependencies": {
+    "axios": "^0.9.1",
     "babel-core": "^6.7.4",
     "bootstrap": "^3.3.6",
     "css-loader": "^0.23.1",
