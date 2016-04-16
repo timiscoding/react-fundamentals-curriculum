@@ -35,12 +35,12 @@ function getCurrentWeather(city){
 function getForecast(city){
   var params =  getQueryStringParams(city);
   var queryStr = createQueryString(params);
-  axios.get(_base_url + 'forecast/daily' + queryStr)
+  return axios.get(_base_url + 'forecast/daily' + queryStr)
     .then(function(weather){
-      console.log('forecast', weather.data);
+      return weather.data;
     })
     .catch(function(err){
-      console.log('error getting weather', err);
+      console.log('error getting forecast', err);
     });
 }
 

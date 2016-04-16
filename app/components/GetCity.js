@@ -2,7 +2,6 @@ import React from 'react';
 import {PropTypes} from 'react';
 
 function Button (props) {
-  console.log("buttons", props.direction);
   return (
     <button type="submit"
       className="btn btn-success"
