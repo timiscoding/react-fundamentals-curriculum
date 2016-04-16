@@ -13,10 +13,9 @@ var ForecastContainer = React.createClass({
     router: PropTypes.object.isRequired
   },
   componentDidMount() {
-    console.log('getting forecast for', this.props.params.city, this.props);
     api.getForecast(this.props.params.city)
       .then(function(weatherData){
-        console.log(weatherData);
+        console.log('forecast for',this.props.params.city, weatherData);
         this.setState({
           isLoading: false,
           forecastData: weatherData
