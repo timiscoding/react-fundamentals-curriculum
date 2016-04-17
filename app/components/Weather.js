@@ -1,4 +1,5 @@
 var React = require('react');
+var PropTypes = React.PropTypes;
 
 var styles = {
   container: {
@@ -12,7 +13,7 @@ var styles = {
 
 function Weather(props){
   return (
-    <div style={styles.container}>
+    <div style={styles.container} onClick={props.onClickDay}>
       <p className="text-center">{props.day}</p>
       <img style={{width: '200px'}} src={props.image} />
       <p className="text-center">{props.temp}°C</p>
@@ -20,5 +21,11 @@ function Weather(props){
     </div>
   )
 }
+
+Weather.propTypes = {
+  day: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  temp: PropTypes.number.isRequired
+};
 
 module.exports = Weather;

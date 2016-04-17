@@ -2,6 +2,8 @@ var axios = require('axios');
 
 var _base_url = 'http://api.openweathermap.org/data/2.5/';
 var API_KEY = 'fb9ceb92233d24c1aa971728512d1cd0';
+var DAYS_OF_WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+var weather_icon_base_url = 'http://openweathermap.org/img/w/';
 
 function getQueryStringParams(city){
   return {
@@ -46,5 +48,7 @@ function getForecast(city){
 
 module.exports = {
   getCurrentWeather: getCurrentWeather,
-  getForecast: getForecast
+  getForecast: getForecast,
+  DAYS_OF_WEEK: DAYS_OF_WEEK,
+  weather_icon_base_url: weather_icon_base_url
 };
