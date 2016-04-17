@@ -8,6 +8,13 @@ let styles = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column'
+  },
+  content: {
+    backgroundImage: 'url(../images/pattern.svg)',
+    flex: '1',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 }
 
@@ -16,7 +23,9 @@ class Main extends React.Component {
     return (
       <div style={styles.container}>
         <Header />
-        {this.props.children}
+        <div style={styles.content}>
+          {this.props.children}
+        </div>
       </div>
     )
   }

@@ -3,7 +3,6 @@ import GetCityContainer from '../containers/GetCityContainer';
 
 let styles = {
   container: {
-    backgroundImage: 'url(../images/pattern.svg)',
     flex: '1',
     display: 'flex',
     flexDirection: 'column',

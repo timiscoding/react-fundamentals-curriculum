@@ -5,6 +5,10 @@ var API_KEY = 'fb9ceb92233d24c1aa971728512d1cd0';
 var DAYS_OF_WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 var weather_icon_base_url = 'http://openweathermap.org/img/w/';
 
+function capitalise(str){
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+
 function getQueryStringParams(city){
   return {
     q: city,
@@ -50,5 +54,6 @@ module.exports = {
   getCurrentWeather: getCurrentWeather,
   getForecast: getForecast,
   DAYS_OF_WEEK: DAYS_OF_WEEK,
-  weather_icon_base_url: weather_icon_base_url
+  weather_icon_base_url: weather_icon_base_url,
+  capitalise: capitalise
 };
